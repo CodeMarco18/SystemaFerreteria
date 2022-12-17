@@ -1,0 +1,43 @@
+<br>
+<div id="content">
+<div class="container col-md-6">
+    <div class="card">
+        <div class="card-header">
+            <h3>Agregar Producto</h3>
+        </div>
+        <div class="card-body">
+          <form (ngSubmit)="guardar()" #clienteForm="ngForm">
+            <div class="form-group">
+                <label for="idProducto">ID:</label>
+                <input id="idProducto" class="form-control" type="number" name="idProducto" [(ngModel)]="producto.idProducto" required placeholder="Ingrese su ID" minlength="4" maxlength="6">
+            </div>
+            <div class="form-group">
+                <label for="nomProducto">Nombre:</label>
+                <input id="nomProducto" class="form-control" type="text" name="nomProducto" [(ngModel)]="producto.nomProducto" required placeholder="Ingrese su Nombre">
+            </div>
+            <div class="form-group">
+                <label for="descripcion">Descripcion:</label>
+                <input id="descripcion" class="form-control" type="text" name="descripcion" [(ngModel)]="producto.descripcion" required placeholder="Ingrese su descripcion">
+            </div>
+            <div class="form-group">
+                <label for="precio">Precio:</label>
+                <input id="precio" class="form-control" type="number" name="precio" [(ngModel)]="producto.precio" placeholder="Ingrese su Número de precio">
+            </div>
+            <div class="form-group">
+                <label for="direccion">Stock:</label>
+                <input id="direccion" class="form-control" type="text" name="direccion" [(ngModel)]="producto.stock" placeholder="Ingrese su stock">
+            </div>
+            <div class="form-group">
+                <label for="marca">Marca:</label>
+                <input id="marca" class="form-control" type="email" name="marca" [(ngModel)]="producto.marca" placeholder="Ingrese su marca">
+            </div>
+            <br>
+            <div class="text-center">
+                <button class="btn btn-success" [disabled]="!clienteForm.form.valid">Guardar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+</div>
+</div>  
+<br>

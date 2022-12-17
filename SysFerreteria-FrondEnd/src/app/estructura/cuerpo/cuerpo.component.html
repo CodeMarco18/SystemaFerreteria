@@ -1,0 +1,140 @@
+<!-- Page Content  -->
+<div id="content">
+    <div class="top-navbar">
+        <div class="main-content">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card card-stats">
+                        <div class="card-header">
+                            <div class="icon icon-warning">
+                                <span class="material-icons">equalizer</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <p class="category"><strong>Compras</strong></p>
+                            <h3 class="card-title">30</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card card-stats">
+                        <div class="card-header">
+                            <div class="icon icon-rose">
+                                <span class="material-icons">shopping_cart</span>
+
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <p class="category"><strong>Ordenes</strong></p>
+                            <h3 class="card-title">20</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card card-stats">
+                        <div class="card-header">
+                            <div class="icon icon-success">
+                                <span class="material-icons">
+                                    attach_money
+                                </span>
+
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <p class="category"><strong>Ventas</strong></p>
+                            <h3 class="card-title">S/5,100</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card card-stats">
+                        <div class="card-header">
+                            <div class="icon icon-info">
+
+                                <span class="material-icons">
+                                    local_shipping
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <p class="category"><strong>Entregas</strong></p>
+                            <h3 class="card-title">5</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-lg-7 col-md-12">
+                    <div class="card" style="min-height: 485px">
+                        <div class="card-header card-header-text">
+                            <h4 class="card-title">Productos</h4>
+                            <p class="category">Precios de roductos</p>
+                        </div>
+                        <div class="card-content table-responsive">
+                            <table class="table table-hover">
+                                <thead class="text-primary">
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nombre</th>
+                                        <th>Precio</th>
+                                        <th>Marca</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let producto of producto">
+                                        <td>{{producto.idProducto}}</td>
+                                        <td>{{producto.nomProducto}}</td>
+                                        <td>{{producto.precio}}</td>
+                                        <td>{{producto.marca}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 col-md-12">
+                    <div class="card" style="min-height: 485px">
+                        <div class="card-header card-header-text">
+                            <h4 class="card-title">Actividades</h4>
+                        </div>
+                        <div class="card-content">
+                            <div class="streamline">
+                                <div class="sl-item sl-primary">
+                                    <div class="sl-content">
+                                        <small class="text-muted">hace 5 minutos</small>
+                                        <p>Recolocación y ubicación de los productos</p>
+                                    </div>
+                                </div>
+                                <div class="sl-item sl-danger">
+                                    <div class="sl-content">
+                                        <small class="text-muted">hace 25 minutos</small>
+                                        <p>Hacer inventario</p>
+                                    </div>
+                                </div>
+                                <div class="sl-item sl-success">
+                                    <div class="sl-content">
+                                        <small class="text-muted">hace 40 minutos</small>
+                                        <p>Limpieza</p>
+                                    </div>
+                                </div>
+                                <div class="sl-item">
+                                    <div class="sl-content">
+                                        <small class="text-muted">hace 45 minutos</small>
+                                        <p>Labores de mantenimiento</p>
+                                    </div>
+                                </div>
+                                <div class="sl-item sl-warning">
+                                    <div class="sl-content">
+                                        <small class="text-muted">hace 55 minutos</small>
+                                        <p>Limpieza de catálogos y folletos</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <app-pie></app-pie>
+    </div>

@@ -1,0 +1,5 @@
+#content {
+    width: calc(100% - 250px);
+    margin-top: 100px;
+    float: right;
+}

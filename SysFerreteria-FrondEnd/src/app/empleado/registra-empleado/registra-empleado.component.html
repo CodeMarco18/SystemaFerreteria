@@ -1,0 +1,42 @@
+<br>
+<div id="content"></div>
+<div class="container col-md-6">
+    <div class="card">
+        <div class="card-header">
+            <h3>Agregar Empleado</h3>
+        </div>
+        <div class="card-body">
+          <form (ngSubmit)="guardar()" #clienteForm="ngForm">
+            <div class="form-group">
+                <label for="id">DNI:</label>
+                <input id="id" class="form-control" type="number" name="id" [(ngModel)]="empleado.dniEmpleado" required placeholder="Ingrese su DNI" minlength="4" maxlength="8">
+            </div>
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input id="nombre" class="form-control" type="text" name="nombre" [(ngModel)]="empleado.nombre" required placeholder="Ingrese su Nombre">
+            </div>
+            <div class="form-group">
+                <label for="apePat">Apellido Paterno:</label>
+                <input id="apePat" class="form-control" type="text" name="apePat" [(ngModel)]="empleado.apePat" required placeholder="Ingrese su apellido">
+            </div>
+            <div class="form-group">
+                <label for="apeMat">Apellido Materno:</label>
+                <input id="apeMat" class="form-control" type="text" name="apeMat" [(ngModel)]="empleado.apeMat" required placeholder="Ingrese su apellido">
+            </div>
+            <div class="form-group">
+                <label for="direccion">Dirección:</label>
+                <input id="direccion" class="form-control" type="text" name="direccion" [(ngModel)]="empleado.direccion" placeholder="Ingrese su Dirección">
+            </div>
+            <div class="form-group">
+                <label for="celular">Celular:</label>
+                <input id="celular" class="form-control" type="tel" name="celular" [(ngModel)]="empleado.celular" placeholder="Ingrese su Número de Celular">
+            </div>
+            <br>
+            <div class="text-center">
+                <button class="btn btn-success" [disabled]="!clienteForm.form.valid">Guardar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+</div>
+  <br>

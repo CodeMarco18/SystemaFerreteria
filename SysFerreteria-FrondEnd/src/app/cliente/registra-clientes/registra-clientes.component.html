@@ -1,0 +1,43 @@
+<br>
+<div id="content">
+<div class="container col-md-6">
+    <div class="card">
+        <div class="card-header">
+            <h3>Agregar Cliente</h3>
+        </div>
+        <div class="card-body">
+          <form (ngSubmit)="guardar()" #clienteForm="ngForm">
+            <div class="form-group">
+                <label for="id">ID:</label>
+                <input id="id" class="form-control" type="number" name="id" [(ngModel)]="cliente.id" required placeholder="Ingrese su ID" minlength="4" maxlength="6">
+            </div>
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input id="nombre" class="form-control" type="text" name="nombre" [(ngModel)]="cliente.nombre" required placeholder="Ingrese su Nombre">
+            </div>
+            <div class="form-group">
+                <label for="apellido">Apellido:</label>
+                <input id="apellido" class="form-control" type="text" name="apellido" [(ngModel)]="cliente.apellido" required placeholder="Ingrese su apellido">
+            </div>
+            <div class="form-group">
+                <label for="celular">Celular:</label>
+                <input id="celular" class="form-control" type="tel" name="celular" [(ngModel)]="cliente.celular" placeholder="Ingrese su Número de Celular">
+            </div>
+            <div class="form-group">
+                <label for="direccion">Dirección:</label>
+                <input id="direccion" class="form-control" type="text" name="direccion" [(ngModel)]="cliente.direccion" placeholder="Ingrese su Dirección">
+            </div>
+            <div class="form-group">
+                <label for="correoElectronico">Email:</label>
+                <input id="correoElectronico" class="form-control" type="email" name="correoElectronico" [(ngModel)]="cliente.correoElectronico" placeholder="Ingrese su Email">
+            </div>
+            <br>
+            <div class="text-center">
+                <button class="btn btn-success" [disabled]="!clienteForm.form.valid">Guardar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+</div>
+</div>
+  <br>

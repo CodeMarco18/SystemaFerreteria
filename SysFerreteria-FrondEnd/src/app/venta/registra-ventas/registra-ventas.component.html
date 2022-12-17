@@ -1,0 +1,71 @@
+<br>
+<div id="content">
+    <div class="container col-md-7">
+        <div class="card">
+            <div class="card-header">
+                <h3>Reguistar Ventas</h3>
+            </div>
+            <div class="card-body">
+                <form (ngSubmit)="guardar()" #clienteForm="ngForm">
+
+                    <div class="row">
+                        <div class="col-md-4 col-sm-2 col-xs-2">
+                            <label class="help-block text-muted small-font" for="idVentas">ID :</label>
+                            <input id="idVentas" class="form-control" type="number" name="idVentas"
+                                [(ngModel)]="venta.idVentas" required placeholder="" minlength="4" maxlength="6">
+                        </div>
+                        <div class="col-md-8 col-sm-2 col-xs-2">
+                            <label class="help-block text-muted small-font" for="numeroDeComprobante">N° Comprobante
+                                :</label>
+                            <input id="numeroDeComprobante" class="form-control" type="text" name="numeroDeComprobante"
+                                [(ngModel)]="venta.numeroDeComprobante" required placeholder="Ingrese N° Comprobante">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="cantidad">Producto:</label>
+                        <select class="form-select" id="autoSizingSelect">
+                            <option *ngFor="let producto of producto">{{producto.nomProducto}}</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="cantidad">Cliente:</label>
+                        <select class="form-select" id="autoSizingSelect">
+                            <option *ngFor="let cliente of cliente">{{cliente.nombre}}</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-3 col-sm-2 col-xs-2">
+                            <label class="help-block text-muted small-font" for="fecha">Fecha:</label>
+                            <input id="fecha" class="form-control" type="date" name="celular" [(ngModel)]="venta.fecha"
+                                placeholder="Ingrese Fecha">
+                        </div>
+                        <div class="col-md-3 col-sm-2 col-xs-2">
+                            <label for="cantidad">Cantidad:</label>
+                            <input id="cantidad" class="form-control" type="email" name="cantidad"
+                                [(ngModel)]="venta.cantidad" placeholder="Ingrese">
+                        </div>
+                        <div class="col-md-3 col-sm-2 col-xs-2">
+                            <label for="precio">Precio:</label>
+                            <input id="precio" class="form-control" type="number" name="precio"
+                                [(ngModel)]="venta.precio" placeholder="">
+                        </div>
+                        <div class="col-md-3 col-sm-2 col-xs-2">
+                            <label for="totalVentas">Total:</label>
+                            <input id="totalVentas" class="form-control" type="number" name="totalVentas"
+                                [(ngModel)]="venta.totalVentas" required placeholder="totalVentas">
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="text-center">
+                        <button class="btn btn-success" [disabled]="!clienteForm.form.valid">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<br>

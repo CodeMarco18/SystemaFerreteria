@@ -1,0 +1,6 @@
+#content {
+    width: calc(93% - 171px);
+    height: calc(102vh - 85px);  
+    float: right;
+    background-color: #EEEEEE;
+} 
